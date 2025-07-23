@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo | LuxeWayDR</title>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>LuxeWayDR</strong></div>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/login/">Login</a>
+      <a href="/registro/">Registro</a>
+      <a href="/feedback/">Feedback</a>
+    </div>
+  </div>
+
+  <div class="catalogo">
+
+    <div class="card">
+      <img src="{% static 'img/apjumbo.jpeg' %}" class="reloj-img" alt="Audemars Piguet">
+      <h3>Audemars Piguet OAK Jumbo</h3>
+      <p class="price-plateado">Precio oficial: $20,000</p>
+      <p class="price-dorado">Precio estimado: $19,800</p>
+      <a href="/reloj/" class="btn-reserva">Ver más</a>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'img/rolex.jpg' %}" class="reloj-img" alt="Rolex Submariner">
+      <h3>Rolex Submariner</h3>
+      <p class="price-plateado">Precio oficial: $9,000</p>
+      <p class="price-dorado">Precio estimado: $10,200</p>
+      <a href="/reloj/" class="btn-reserva">Ver más</a>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'img/omega.jpg' %}" class="reloj-img" alt="Omega Speedmaster">
+      <h3>Omega Speedmaster</h3>
+      <p class="price-plateado">Precio oficial: $7,000</p>
+      <p class="price-dorado">Precio estimado: $6,200</p>
+      <a href="/reloj/" class="btn-reserva">Ver más</a>
+    </div>
+
+  </div>
+</body>
+</html>

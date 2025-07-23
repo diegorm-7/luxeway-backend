@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ reloj.nombre }} | LuxeWayDR</title>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>LuxeWayDR</strong></div>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/catalogo/">Catálogo</a>
+      <a href="/feedback/">Feedback</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card-simple">
+      <img src="{{ reloj.imagen.url }}" class="reloj-img" alt="{{ reloj.nombre }}">
+      <h2>{{ reloj.nombre }}</h2>
+      <p>Precio oficial: ${{ reloj.precio_oficial }}</p>
+      <p>Precio estimado: ${{ reloj.precio_estimado }}</p>
+      <p>Descripción: {{ reloj.descripcion }}</p>
+      <a class="btn-reserva" href="{{ reloj.enlace_tienda }}" target="_blank">Reservar en Tienda Oficial</a>
+    </div>
+  </div>
+</body>
+</html>

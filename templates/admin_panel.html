@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin | LuxeWayDR</title>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>Admin | LuxeWayDR</strong></div>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/logout/">Cerrar sesión</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <h2>Estadísticas Generales</h2>
+      <ul>
+        <li>👥 Usuarios registrados: <strong>128</strong></li>
+        <li>💬 Comentarios recibidos: <strong>45</strong></li>
+        <li>⌚ Relojes más vistos: <strong>Rolex Submariner, Omega Speedmaster</strong></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Comentarios Pendientes</h2>
+      <div class="comentario-admin">
+        <p><strong>Diego:</strong> ¿Tienen modelos automáticos bajo $5,000?</p>
+        <form>
+          <textarea placeholder="Responder..." rows="2" style="width: 100%;"></textarea><br>
+          <button class="btn-reserva" type="submit">Responder</button>
+        </form>
+        <hr>
+        <p><strong>Sofía:</strong> El sitio está lento en móvil.</p>
+        <form>
+          <textarea placeholder="Responder..." rows="2" style="width: 100%;"></textarea><br>
+          <button class="btn-reserva" type="submit">Responder</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Presentación | LuxeWayDR</title>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>LuxeWayDR</strong></div>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/catalogo/">Catálogo</a>
+      <a href="/login/">Login</a>
+      <a href="/feedback/">Feedback</a>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div id="carouselRelojes" class="carousel slide mb-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/rolex.jpg' %}" class="d-block w-100" alt="Rolex">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/omega.jpg' %}" class="d-block w-100" alt="Omega">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/apjumbo.jpg' %}" class="d-block w-100" alt="AP Jumbo">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselRelojes" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselRelojes" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Tarjeta de bienvenida -->
+    <div class="card-simple">
+      <h2>LuxeWayDR</h2>
+      <p>Tu plataforma para explorar, comparar y reservar los relojes más exclusivos del mundo.</p>
+      <a class="btn-reserva" href="/catalogo/">Ir al Catálogo</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

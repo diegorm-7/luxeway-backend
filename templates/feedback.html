@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback | LuxeWayDR</title>
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body>
+  <div class="navbar">
+    <div><strong>LuxeWayDR</strong></div>
+    <div>
+      <a href="/">Inicio</a>
+      <a href="/catalogo/">Catálogo</a>
+      <a href="/feedback/">Feedback</a>
+      <a href="/login/">Login</a>
+    </div>
+  </div>
+
+  <div class="feedback-container">
+    <h2>Comentarios</h2>
+
+    <div class="comment-box">
+      <div class="comment-header">
+        <strong>Usuario123</strong>
+        <span class="comment-date">Hace 2 horas</span>
+      </div>
+      <p>Excelente plataforma. Muy útil para comparar precios de relojes de lujo.</p>
+    </div>
+
+    <div class="comment-box">
+      <div class="comment-header">
+        <strong>LuxuryFan</strong>
+        <span class="comment-date">Hace 1 día</span>
+      </div>
+      <p>Me gustaría que agregaran más modelos de Audemars Piguet.</p>
+    </div>
+
+    <form class="form-comentario" method="post">
+      {% csrf_token %}
+      <textarea name="comentario" placeholder="Escribe tu comentario aquí..." required></textarea>
+      <button type="submit" class="btn-reserva">Publicar</button>
+    </form>
+
+  <h2>Contacto</h2>
+     <p>Correo: diegorodriguezm107@gmail.com</p>
+      <p>Telefono: 04145356069</p>
+  </div>
+</body>
+</html>
