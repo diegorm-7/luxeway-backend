@@ -1,0 +1,286 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navbar - Estilo profesional */
+.navbar {
+  background-color: #002b5c;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+}
+
+/* Carrusel (Bootstrap) */
+.carousel {
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.carousel-inner img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ----------------------------- */
+/* LOGIN & REGISTRO - Instagram */
+/* ----------------------------- */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.auth-box {
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 1.5rem;
+  color: #002b5c;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #002b5c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-box button:hover {
+  background-color: #003580;
+}
+
+/* ----------------------------- */
+/* CATÁLOGO - Estilo Lyst        */
+/* ----------------------------- */
+.catalogo-container {
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #111;
+}
+
+.grid-catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.tarjeta-reloj {
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: center;
+  max-width: 300px;
+}
+
+.tarjeta-reloj:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.img-reloj {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.info-reloj {
+  padding: 1rem;
+}
+
+.info-reloj h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #222;
+}
+
+.marca {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.precio-oficial {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #004aad;
+}
+
+.precio-retail {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.btn-ver-detalle {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-ver-detalle:hover {
+  background-color: #333;
+}
+
+
+/* ----------------------------- */
+/* DETALLE DEL RELOJ - Lyst      */
+/* ----------------------------- */
+.detalle-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.detalle-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* ----------------------------- */
+/* COMENTARIOS - estilo YouTube  */
+/* ----------------------------- */
+.feedback-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.feedback-container h2 {
+  margin-bottom: 1.5rem;
+  color: #002b5c;
+}
+
+.comment-box {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.comment-box p {
+  margin: 0;
+  color: #222;
+}
+
+/* Formulario de comentarios */
+.form-comentario {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-comentario textarea {
+  resize: vertical;
+  min-height: 100px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form-comentario button {
+  align-self: flex-end;
+  background-color: #002b5c;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-comentario button:hover {
+  background-color: #004aad;
+}
+
+

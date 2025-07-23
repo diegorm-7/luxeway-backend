@@ -1,0 +1,67 @@
+.detalle-reloj-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.detalle-reloj-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.detalle-reloj-imagen {
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.detalle-reloj-info {
+  text-align: center;
+}
+
+.detalle-reloj-info h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.detalle-reloj-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.btn-reservar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-reservar:hover {
+  background-color: #003e9e;
+}
+
+.mensaje-reserva {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cargando {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+}

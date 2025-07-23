@@ -1,0 +1,45 @@
+.reservas-container {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.titulo {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #1a1a1a;
+}
+
+.reservas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.reserva-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.reserva-card img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.reserva-card h4 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.sin-reservas {
+  font-size: 18px;
+  color: #888;
+}
