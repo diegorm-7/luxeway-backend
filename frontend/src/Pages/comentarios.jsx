@@ -7,7 +7,7 @@ function Comentarios() {
   const [mensaje, setMensaje] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/comentarios/')
+    fetch(`${process.env.REACT_APP_API_URL}/api/comentarios/`)
       .then(res => res.json())
       .then(data => setComentarios(data))
       .catch(err => console.error(err));
@@ -16,7 +16,7 @@ function Comentarios() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8000/api/comentarios/', {
+    fetch(`${process.env.REACT_APP_API_URL}/api/comentarios/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nombre, mensaje }),

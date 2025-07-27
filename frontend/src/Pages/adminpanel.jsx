@@ -5,7 +5,7 @@ function AdminPanel() {
   const [relojes, setRelojes] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/relojes/')
+   fetch(`${process.env.REACT_APP_API_URL}/api/relojes/`)
       .then(res => res.json())
       .then(data => setRelojes(data))
       .catch(err => console.error('Error en admin panel:', err));
