@@ -10,13 +10,12 @@ const DetalleReloj = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/api/relojes/${id}/`)
+    axios.get(`https://luxeway-backend.onrender.com/api/relojes/${id}/`)
       .then(res => setReloj(res.data))
       .catch(err => console.error('Error al obtener detalles del reloj:', err));
   }, [id]);
 
   const handleReservar = () => {
-    // Aquí podrías hacer una petición POST si tienes backend para reservas
     setMensaje('✅ Reserva exitosa');
     setTimeout(() => {
       setMensaje('');
@@ -50,4 +49,3 @@ const DetalleReloj = () => {
 };
 
 export default DetalleReloj;
-

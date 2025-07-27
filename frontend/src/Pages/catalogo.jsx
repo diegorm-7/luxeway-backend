@@ -8,13 +8,13 @@ const Catalogo = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/api/relojes/')
+    axios.get('https://luxeway-backend.onrender.com/api/relojes/')
       .then(res => setRelojes(res.data))
       .catch(err => console.error('Error al obtener los relojes:', err));
   }, []);
 
   const handleReservar = (id) => {
-    navigate(`/reloj/${id}`);  // O usar /reserva/${id} si prefieres ir directo
+    navigate(`/reloj/${id}`); 
   };
 
   return (
