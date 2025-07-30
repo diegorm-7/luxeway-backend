@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import dj_database_url  # Asegúrate de tenerlo instalado
+import dj_database_url  # Asegúrate de tenerlo instalado: pip install dj-database-url
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Seguridad
 SECRET_KEY = os.getenv('SECRET_KEY', 'clave-insegura-por-defecto')
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = ['*']  # En producción, deberías restringirlo
+ALLOWED_HOSTS = ['*']  # En producción deberías especificar tu dominio
 
 # Aplicaciones instaladas
 INSTALLED_APPS = [
@@ -24,13 +24,6 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 ]
 
-# REST Framework
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    )
-}
-
 # Middleware
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -43,6 +36,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Rutas y plantillas
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
@@ -62,12 +56,19 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-# Configuración dinámica para usar PostgreSQL en producción o local
+# Base de datos dinámica con fallback local (PostgreSQL de Render)
 DATABASES = {
     'default': dj_database_url.config(
         default='postgresql://luxewaydr_user:Z43KoZ3kdn1IK3JQS7tusdAS789fRCSi@dpg-d20debvdiees739dc3ag-a.oregon-postgres.render.com/luxewaydr',
         conn_max_age=600,
         ssl_require=True
+    )
+}
+
+# REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 
@@ -93,17 +94,32 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Clave primaria por defecto
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+# --- CORS Configuration ---
 CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
-    "diegorm-7.github.io/Luxeway/",  # GitHub Pages
-]
-
-# CORS
-CORS_ALLOW_ALL_ORIGINS = True
-CORS_ALLOWED_ORIGINS = [
+    "https://diegorm-7.github.io",  # GitHub Pages
     "http://localhost:3000",
     "http://localhost:3001",
-    "diegorm-7.github.io/Luxeway/",  # Frontend en GitHub Pages
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS"
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
 ]
