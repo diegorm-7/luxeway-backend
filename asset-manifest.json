@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Luxeway/static/css/main.f3c398fa.css",
+    "main.js": "/Luxeway/static/js/main.6dfeffd4.js",
+    "index.html": "/Luxeway/index.html",
+    "main.f3c398fa.css.map": "/Luxeway/static/css/main.f3c398fa.css.map",
+    "main.6dfeffd4.js.map": "/Luxeway/static/js/main.6dfeffd4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3c398fa.css",
+    "static/js/main.6dfeffd4.js"
+  ]
+}
