@@ -33,6 +33,15 @@ const Presentacion = () => {
           </button>
         </div>
       )}
+<img
+  src={`${process.env.PUBLIC_URL}/img/LuxeWayDR_logo.png`}
+  alt="LuxeWayDR Logo"
+  style={{
+    height: '120px',     // Más alto
+    marginBottom: '20px' // Separación con el texto
+  }}
+/>
+
 
       {/* Tarjeta de bienvenida */}
       <div className="card text-center shadow-lg p-4 bg-white rounded">

@@ -8,7 +8,7 @@ import Catalogo from './Pages/catalogo';
 import DetalleReloj from './Pages/detallereloj';
 import Comentarios from './Pages/comentarios'; // Comentarios + Feedback unificado
 
-// Nuevas pantallas
+
 import Login from './Pages/login';
 import Registro from './Pages/registro';
 import Reserva from './Pages/reserva'; // Detalle + Acción de reservar

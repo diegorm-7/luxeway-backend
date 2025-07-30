@@ -3,12 +3,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import '../Styles/Catalogo.css';
 
+const API_URL = 'https://luxeway-backend.onrender.com';
+
 const Catalogo = () => {
   const [relojes, setRelojes] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('https://luxeway-backend.onrender.com/api/relojes/')
+    axios.get(`${API_URL}/api/relojes/`)
       .then(res => setRelojes(res.data))
       .catch(err => console.error('Error al obtener los relojes:', err));
   }, []);
@@ -29,7 +31,7 @@ const Catalogo = () => {
                 alt={`${reloj.marca} ${reloj.modelo}`} 
                 className="card-img-top" 
                 style={{ height: '250px', objectFit: 'contain' }} 
-                onError={(e) => e.target.src = '/default_watch.png'} // Imagen por defecto
+                onError={(e) => e.target.src = '/default_watch.png'}
               />
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{reloj.marca} - {reloj.modelo}</h5>
