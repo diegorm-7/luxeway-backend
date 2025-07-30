@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-import dj_database_url
+import dj_database_url  # Asegúrate de tenerlo instalado
 
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -62,9 +62,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-# Base de datos (Railway usará DATABASE_URL)
+# Configuración dinámica para usar PostgreSQL en producción o local
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default='postgresql://luxewaydr_user:Z43KoZ3kdn1IK3JQS7tusdAS789fRCSi@dpg-d20debvdiees739dc3ag-a.oregon-postgres.render.com/luxewaydr',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 # Validación de contraseñas
@@ -88,10 +92,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Clave primaria por defecto
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+   "diegorm-7.github.io/Luxeway/",  # GitHub Pages
+]
 
 # CORS
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "https://diegorm-7.github.io",  # Frontend en GitHub Pages
+    "diegorm-7.github.io/Luxeway/",  # Frontend en GitHub Pages
 ]

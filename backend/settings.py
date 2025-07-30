@@ -93,10 +93,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Clave primaria por defecto
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+CORS_ALLOW_ALL_ORIGINS = False
+
+CORS_ALLOWED_ORIGINS = [
+    "diegorm-7.github.io/Luxeway/",  # GitHub Pages
+]
+
 # CORS
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:3001",
-    "https://diegorm-7.github.io",  # Frontend en GitHub Pages
+    "diegorm-7.github.io/Luxeway/",  # Frontend en GitHub Pages
 ]
